@@ -2,9 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-
 #Input
-
 #tiempos
 print("Cuantas entradas de tiempo va a introducir?")
 numtime = int(input())
@@ -45,10 +43,9 @@ k, t0 = params
 incertidumbre = np.sqrt(np.diag(inc))
 k_inc, t0_inc = incertidumbre
 
-
 # Calcular hora de introducción
-horas = times[0]//1
-minutos = (times[0]%1)*100
+horas = int(times[0]//1)
+minutos = int((times[0]%1)*100)
 hora_introduccion =  (horas*60) + minutos - t0  # Convertir primer tiempo a minutos y restar t0
 hora = int(hora_introduccion // 60)
 minuto = int(hora_introduccion % 60)
@@ -58,8 +55,7 @@ print(f"Hora de introducción: {hora}:{minuto:02d}")
 print(f"Constante de enfriamiento (k): {k:.5f}± {k_inc:.5f} min⁻¹")
 print(f"Tiempo de introducción (t0): {t0:.2f}± {t0_inc:.5f} minutos")
 
-horas = int(horas)
-minutos = int(minutos)
+
 
 # Graficar los datos y el modelo ajustado
 rangetime = np.linspace(-t0, 25, 100)  # Rango de tiempo para la curva ajustada
