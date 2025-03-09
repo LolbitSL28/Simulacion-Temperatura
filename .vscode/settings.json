@@ -5,6 +5,8 @@
         "linestyle",
         "numtemp",
         "numtime",
+        "rangetemp",
+        "rangetime",
         "xlabel",
         "ylabel"
     ]
