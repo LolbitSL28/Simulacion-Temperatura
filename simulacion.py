@@ -55,8 +55,6 @@ print(f"Hora de introducción: {hora}:{minuto:02d}")
 print(f"Constante de enfriamiento (k): {k:.5f}± {k_inc:.5f} min⁻¹")
 print(f"Tiempo de introducción (t0): {t0:.2f}± {t0_inc:.5f} minutos")
 
-
-
 # Graficar los datos y el modelo ajustado
 rangetime = np.linspace(-t0, 25, 100)  # Rango de tiempo para la curva ajustada
 rangetemp = ecuacion(rangetime, k, t0)
