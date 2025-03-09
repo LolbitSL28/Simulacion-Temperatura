@@ -54,8 +54,8 @@ minuto = int(hora_introduccion % 60)
 
 print("--RESULTADOS--")
 print(f"Hora de introducción: {hora}:{minuto:02d}")
-print(f"Constante de enfriamiento (k): {k:.5f} min⁻¹")
-print(f"Tiempo de introducción (t0): {t0:.2f} minutos")
+print(f"Constante de enfriamiento (k): {k:.5f}± {k_inc:.5f} min⁻¹")
+print(f"Tiempo de introducción (t0): {t0:.2f}± {t0_inc:.5f} minutos")
 
 horas = int(horas)
 minutos = int(minutos)
