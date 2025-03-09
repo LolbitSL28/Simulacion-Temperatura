@@ -37,7 +37,8 @@ def ecuacion(t,k,t0):
     return Tm+(T0-Tm)*np.exp(-k*(t+t0))
 
 #Procedimiento
-params, inc = curve_fit(ecuacion, tiempos, temperaturas, p0=[0.01,20]) #valores iniciales cercanos a los calculados hardcoded, as much as i tried, if i calculated them here curve_fit refused to work
+params, inc = curve_fit(ecuacion, tiempos, temperaturas, p0=[0.01,20]) 
+#valores iniciales cercanos a los calculados hardcoded, as much as i tried, if i calculated them here curve_fit refused to work
 k, t0 = params
 
 #Calculo de incertidumbre
