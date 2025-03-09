@@ -48,7 +48,7 @@ k_inc, t0_inc = incertidumbre
 # Calcular hora de introducción
 horas = times[0]//1
 minutos = (times[0]%1)*100
-hora_introduccion =  (horas*60) + minutos - t0  # Convertir 4:37 a minutos y restar t0
+hora_introduccion =  (horas*60) + minutos - t0  # Convertir primer tiempo a minutos y restar t0
 hora = int(hora_introduccion // 60)
 minuto = int(hora_introduccion % 60)
 
